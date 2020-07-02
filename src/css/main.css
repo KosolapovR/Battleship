@@ -3,3 +3,97 @@ body{
     margin: 0;
     padding: 0;
 }
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+nav{
+    height: auto;
+    padding: 0 30px;
+}
+
+nav .game-status{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #fff;
+}
+
+
+.player-ships,
+.enemy-ships{
+    padding: 20px;
+}
+
+.ships{
+    display: flex;
+}
+
+.ship{
+    position: relative;
+    height: 100px;
+    margin-left: 20px;
+}
+
+.ship .ship__count{
+    position: absolute;
+    top: -30px;
+    right: 30%;
+}
+
+.battleship img{
+    height: 150px;
+    width: auto;
+}
+
+.carrier img{
+    height: 120px;
+    width: auto;
+}
+
+.cruiser img{
+    height: 90px;
+    width: auto;
+}
+.destroyer img{
+    height: 60px;
+    width: auto;
+}
+.boat img{
+    height: 35px;
+    width: auto;
+}
+
+
+
+.battlefield{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#player-field,
+#enemy-field{
+    margin: 0 50px;
+    border: 1px solid #333;
+}
+
+.field--row{
+    display: flex;
+    height: 30px;
+    justify-content: space-between;
+}
+
+.field--col{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #333;
+    cursor:  url('../images/icons/target.png') 16 16, pointer;
+}
+
+.field--col:hover{
+    background: #c0c0c0;
+}
