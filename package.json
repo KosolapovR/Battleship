@@ -1,0 +1,26 @@
+{
+  "name": "landing",
+  "version": "1.0.0",
+  "description": "sea battle",
+  "main": "index.js",
+  "scripts": {
+    "start": "index.html",
+    "gulp": "gulp"
+  },
+  "author": "KosolapovRV",
+  "license": "ISC",
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "not IE_Mob 11",
+    "maintained node versions"
+  ],
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "latest",
+    "gulp-image": "^6.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.2"
+  }
+}
