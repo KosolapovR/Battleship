@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="src/css/main.css">
     <link rel="dns-prefetch" href="https://code.jquery.com">
     <link rel="preconnect" href="https://code.jquery.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 </head>
 <body>
 
@@ -15,312 +17,389 @@
             <div class="player-ships">
                 <ul class="ships">
                     <li class="ship battleship">
-                        <img class="ship__img" src="src/images/Battleship/ShipBattleshipHull.png" alt="ship"/>
+                        <img class="ship__img" src="src/images/battleship.png" alt="ship"/>
                         <span class="ship__count">1</span>
                     </li>
-                    <li class="ship carrier">
-                        <img class="ship__img" src="src/images/Carrier/ShipCarrierHull.png" alt="ship"/>
+                    <li class="ship cruiser">
+                        <img class="ship__img" src="src/images/cruiser.png" alt="ship"/>
                         <span class="ship__count">2</span>
                     </li>
-                    <li class="ship cruiser">
-                        <img class="ship__img" src="src/images/Cruiser/ShipCruiserHull.png" alt="ship"/>
-                        <span class="ship__count">3</span>
-                    </li>
                     <li class="ship destroyer">
-                        <img class="ship__img" src="src/images/Destroyer/ShipDestroyerHull.png" alt="ship"/>
-                        <span class="ship__count">4</span>
+                        <img class="ship__img" src="src/images/destroyer.png" alt="ship"/>
+                        <span class="ship__count"></span>
                     </li>
                     <li class="ship boat">
-                        <img class="ship__img" src="src/images/PatrolBoat/ShipPatrolHull.png" alt="ship"/>
-                        <span class="ship__count">5</span>
+                        <img class="ship__img" src="src/images/boat.png" alt="ship"/>
+                        <span class="ship__count">4</span>
                     </li>
                 </ul>
-
+            </div>
+            <div class="stat">
+                <div>Счет</div>
+                <div class="row">
+                    <div class="stat__item stat__item--player">0</div>
+                    <div>:</div>
+                    <div class="stat__item stat__item--enemy">0</div>
+                </div>
             </div>
             <div class="enemy-ships">
                 <ul class="ships">
                     <li class="ship battleship">
-                        <img class="ship__img" src="src/images/Battleship/ShipBattleshipHull.png" alt="ship"/>
+                        <img class="ship__img" src="src/images/battleshipRed.png" alt="ship"/>
                         <span class="ship__count">1</span>
                     </li>
-                    <li class="ship carrier">
-                        <img class="ship__img" src="src/images/Carrier/ShipCarrierHull.png" alt="ship"/>
+                    <li class="ship cruiser">
+                        <img class="ship__img" src="src/images/cruiserRed.png" alt="ship"/>
                         <span class="ship__count">2</span>
                     </li>
-                    <li class="ship cruiser">
-                        <img class="ship__img" src="src/images/Cruiser/ShipCruiserHull.png" alt="ship"/>
+                    <li class="ship destroyer">
+                        <img class="ship__img" src="src/images/destroyerRed.png" alt="ship"/>
                         <span class="ship__count">3</span>
                     </li>
-                    <li class="ship destroyer">
-                        <img class="ship__img" src="src/images/Destroyer/ShipDestroyerHull.png" alt="ship"/>
-                        <span class="ship__count">4</span>
-                    </li>
                     <li class="ship boat">
-                        <img class="ship__img" src="src/images/PatrolBoat/ShipPatrolHull.png" alt="ship"/>
-                        <span class="ship__count">5</span>
+                        <img class="ship__img" src="src/images/boatRed.png" alt="ship"/>
+                        <span class="ship__count">4</span>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <main>
 
-        <!--        BATTLEFIELD-->
-        <div class="battlefield">
-            <div id="player-field" class="field">
-                <div class="field--row">
-                    <div class="field--col" data-row="0" data-col="0"></div>
-                    <div class="field--col" data-row="0" data-col="1"></div>
-                    <div class="field--col" data-row="0" data-col="2"></div>
-                    <div class="field--col" data-row="0" data-col="3"></div>
-                    <div class="field--col" data-row="0" data-col="4"></div>
-                    <div class="field--col" data-row="0" data-col="5"></div>
-                    <div class="field--col" data-row="0" data-col="6"></div>
-                    <div class="field--col" data-row="0" data-col="7"></div>
-                    <div class="field--col" data-row="0" data-col="8"></div>
-                    <div class="field--col" data-row="0" data-col="9"></div>
-                </div>
-                <div class="field--row">
-                    <div class="field--col" data-row="1" data-col="0"></div>
-                    <div class="field--col" data-row="1" data-col="1"></div>
-                    <div class="field--col" data-row="1" data-col="2"></div>
-                    <div class="field--col" data-row="1" data-col="3"></div>
-                    <div class="field--col" data-row="1" data-col="4"></div>
-                    <div class="field--col" data-row="1" data-col="5"></div>
-                    <div class="field--col" data-row="1" data-col="6"></div>
-                    <div class="field--col" data-row="1" data-col="7"></div>
-                    <div class="field--col" data-row="1" data-col="8"></div>
-                    <div class="field--col" data-row="1" data-col="9"></div>
-                </div>
-                <div class="field--row">
-                    <div class="field--col" data-row="2" data-col="0"></div>
-                    <div class="field--col" data-row="2" data-col="1"></div>
-                    <div class="field--col" data-row="2" data-col="2"></div>
-                    <div class="field--col" data-row="2" data-col="3"></div>
-                    <div class="field--col" data-row="2" data-col="4"></div>
-                    <div class="field--col" data-row="2" data-col="5"></div>
-                    <div class="field--col" data-row="2" data-col="6"></div>
-                    <div class="field--col" data-row="2" data-col="7"></div>
-                    <div class="field--col" data-row="2" data-col="8"></div>
-                    <div class="field--col" data-row="2" data-col="9"></div>
-                </div>
-                <div class="field--row">
-                    <div class="field--col" data-row="3" data-col="0"></div>
-                    <div class="field--col" data-row="3" data-col="1"></div>
-                    <div class="field--col" data-row="3" data-col="2"></div>
-                    <div class="field--col" data-row="3" data-col="3"></div>
-                    <div class="field--col" data-row="3" data-col="4"></div>
-                    <div class="field--col" data-row="3" data-col="5"></div>
-                    <div class="field--col" data-row="3" data-col="6"></div>
-                    <div class="field--col" data-row="3" data-col="7"></div>
-                    <div class="field--col" data-row="3" data-col="8"></div>
-                    <div class="field--col" data-row="3" data-col="9"></div>
-                </div>
-                <div class="field--row">
-                    <div class="field--col" data-row="4" data-col="0"></div>
-                    <div class="field--col" data-row="4" data-col="1"></div>
-                    <div class="field--col" data-row="4" data-col="2"></div>
-                    <div class="field--col" data-row="4" data-col="3"></div>
-                    <div class="field--col" data-row="4" data-col="4"></div>
-                    <div class="field--col" data-row="4" data-col="5"></div>
-                    <div class="field--col" data-row="4" data-col="6"></div>
-                    <div class="field--col" data-row="4" data-col="7"></div>
-                    <div class="field--col" data-row="4" data-col="8"></div>
-                    <div class="field--col" data-row="4" data-col="9"></div>
-                </div>
-                <div class="field--row">
-                    <div class="field--col" data-row="5" data-col="0"></div>
-                    <div class="field--col" data-row="5" data-col="1"></div>
-                    <div class="field--col" data-row="5" data-col="2"></div>
-                    <div class="field--col" data-row="5" data-col="3"></div>
-                    <div class="field--col" data-row="5" data-col="4"></div>
-                    <div class="field--col" data-row="5" data-col="5"></div>
-                    <div class="field--col" data-row="5" data-col="6"></div>
-                    <div class="field--col" data-row="5" data-col="7"></div>
-                    <div class="field--col" data-row="5" data-col="8"></div>
-                    <div class="field--col" data-row="5" data-col="9"></div>
-                </div>
-                <div class="field--row">
-                    <div class="field--col" data-row="6" data-col="0"></div>
-                    <div class="field--col" data-row="6" data-col="1"></div>
-                    <div class="field--col" data-row="6" data-col="2"></div>
-                    <div class="field--col" data-row="6" data-col="3"></div>
-                    <div class="field--col" data-row="6" data-col="4"></div>
-                    <div class="field--col" data-row="6" data-col="5"></div>
-                    <div class="field--col" data-row="6" data-col="6"></div>
-                    <div class="field--col" data-row="6" data-col="7"></div>
-                    <div class="field--col" data-row="6" data-col="8"></div>
-                    <div class="field--col" data-row="6" data-col="9"></div>
-                </div>
-                <div class="field--row">
-                    <div class="field--col" data-row="7" data-col="0"></div>
-                    <div class="field--col" data-row="7" data-col="1"></div>
-                    <div class="field--col" data-row="7" data-col="2"></div>
-                    <div class="field--col" data-row="7" data-col="3"></div>
-                    <div class="field--col" data-row="7" data-col="4"></div>
-                    <div class="field--col" data-row="7" data-col="5"></div>
-                    <div class="field--col" data-row="7" data-col="6"></div>
-                    <div class="field--col" data-row="7" data-col="7"></div>
-                    <div class="field--col" data-row="7" data-col="8"></div>
-                    <div class="field--col" data-row="7" data-col="9"></div>
-                </div>
-                <div class="field--row">
-                    <div class="field--col" data-row="8" data-col="0"></div>
-                    <div class="field--col" data-row="8" data-col="1"></div>
-                    <div class="field--col" data-row="8" data-col="2"></div>
-                    <div class="field--col" data-row="8" data-col="3"></div>
-                    <div class="field--col" data-row="8" data-col="4"></div>
-                    <div class="field--col" data-row="8" data-col="5"></div>
-                    <div class="field--col" data-row="8" data-col="6"></div>
-                    <div class="field--col" data-row="8" data-col="7"></div>
-                    <div class="field--col" data-row="8" data-col="8"></div>
-                    <div class="field--col" data-row="8" data-col="9"></div>
-                </div>
-                <div class="field--row">
-                    <div class="field--col" data-row="9" data-col="0"></div>
-                    <div class="field--col" data-row="9" data-col="1"></div>
-                    <div class="field--col" data-row="9" data-col="2"></div>
-                    <div class="field--col" data-row="9" data-col="3"></div>
-                    <div class="field--col" data-row="9" data-col="4"></div>
-                    <div class="field--col" data-row="9" data-col="5"></div>
-                    <div class="field--col" data-row="9" data-col="6"></div>
-                    <div class="field--col" data-row="9" data-col="7"></div>
-                    <div class="field--col" data-row="9" data-col="8"></div>
-                    <div class="field--col" data-row="9" data-col="9"></div>
-                </div>
-            </div>
-            <div id="enemy-field" class="field">
-                <div class="field--row">
-                    <div class="field--col" data-row="0" data-col="0"></div>
-                    <div class="field--col" data-row="0" data-col="1"></div>
-                    <div class="field--col" data-row="0" data-col="2"></div>
-                    <div class="field--col" data-row="0" data-col="3"></div>
-                    <div class="field--col" data-row="0" data-col="4"></div>
-                    <div class="field--col" data-row="0" data-col="5"></div>
-                    <div class="field--col" data-row="0" data-col="6"></div>
-                    <div class="field--col" data-row="0" data-col="7"></div>
-                    <div class="field--col" data-row="0" data-col="8"></div>
-                    <div class="field--col" data-row="0" data-col="9"></div>
-                </div>
-                <div class="field--row">
-                    <div class="field--col" data-row="1" data-col="0"></div>
-                    <div class="field--col" data-row="1" data-col="1"></div>
-                    <div class="field--col" data-row="1" data-col="2"></div>
-                    <div class="field--col" data-row="1" data-col="3"></div>
-                    <div class="field--col" data-row="1" data-col="4"></div>
-                    <div class="field--col" data-row="1" data-col="5"></div>
-                    <div class="field--col" data-row="1" data-col="6"></div>
-                    <div class="field--col" data-row="1" data-col="7"></div>
-                    <div class="field--col" data-row="1" data-col="8"></div>
-                    <div class="field--col" data-row="1" data-col="9"></div>
-                </div>
-                <div class="field--row">
-                    <div class="field--col" data-row="2" data-col="0"></div>
-                    <div class="field--col" data-row="2" data-col="1"></div>
-                    <div class="field--col" data-row="2" data-col="2"></div>
-                    <div class="field--col" data-row="2" data-col="3"></div>
-                    <div class="field--col" data-row="2" data-col="4"></div>
-                    <div class="field--col" data-row="2" data-col="5"></div>
-                    <div class="field--col" data-row="2" data-col="6"></div>
-                    <div class="field--col" data-row="2" data-col="7"></div>
-                    <div class="field--col" data-row="2" data-col="8"></div>
-                    <div class="field--col" data-row="2" data-col="9"></div>
-                </div>
-                <div class="field--row">
-                    <div class="field--col" data-row="3" data-col="0"></div>
-                    <div class="field--col" data-row="3" data-col="1"></div>
-                    <div class="field--col" data-row="3" data-col="2"></div>
-                    <div class="field--col" data-row="3" data-col="3"></div>
-                    <div class="field--col" data-row="3" data-col="4"></div>
-                    <div class="field--col" data-row="3" data-col="5"></div>
-                    <div class="field--col" data-row="3" data-col="6"></div>
-                    <div class="field--col" data-row="3" data-col="7"></div>
-                    <div class="field--col" data-row="3" data-col="8"></div>
-                    <div class="field--col" data-row="3" data-col="9"></div>
-                </div>
-                <div class="field--row">
-                    <div class="field--col" data-row="4" data-col="0"></div>
-                    <div class="field--col" data-row="4" data-col="1"></div>
-                    <div class="field--col" data-row="4" data-col="2"></div>
-                    <div class="field--col" data-row="4" data-col="3"></div>
-                    <div class="field--col" data-row="4" data-col="4"></div>
-                    <div class="field--col" data-row="4" data-col="5"></div>
-                    <div class="field--col" data-row="4" data-col="6"></div>
-                    <div class="field--col" data-row="4" data-col="7"></div>
-                    <div class="field--col" data-row="4" data-col="8"></div>
-                    <div class="field--col" data-row="4" data-col="9"></div>
-                </div>
-                <div class="field--row">
-                    <div class="field--col" data-row="5" data-col="0"></div>
-                    <div class="field--col" data-row="5" data-col="1"></div>
-                    <div class="field--col" data-row="5" data-col="2"></div>
-                    <div class="field--col" data-row="5" data-col="3"></div>
-                    <div class="field--col" data-row="5" data-col="4"></div>
-                    <div class="field--col" data-row="5" data-col="5"></div>
-                    <div class="field--col" data-row="5" data-col="6"></div>
-                    <div class="field--col" data-row="5" data-col="7"></div>
-                    <div class="field--col" data-row="5" data-col="8"></div>
-                    <div class="field--col" data-row="5" data-col="9"></div>
-                </div>
-                <div class="field--row">
-                    <div class="field--col" data-row="6" data-col="0"></div>
-                    <div class="field--col" data-row="6" data-col="1"></div>
-                    <div class="field--col" data-row="6" data-col="2"></div>
-                    <div class="field--col" data-row="6" data-col="3"></div>
-                    <div class="field--col" data-row="6" data-col="4"></div>
-                    <div class="field--col" data-row="6" data-col="5"></div>
-                    <div class="field--col" data-row="6" data-col="6"></div>
-                    <div class="field--col" data-row="6" data-col="7"></div>
-                    <div class="field--col" data-row="6" data-col="8"></div>
-                    <div class="field--col" data-row="6" data-col="9"></div>
-                </div>
-                <div class="field--row">
-                    <div class="field--col" data-row="7" data-col="0"></div>
-                    <div class="field--col" data-row="7" data-col="1"></div>
-                    <div class="field--col" data-row="7" data-col="2"></div>
-                    <div class="field--col" data-row="7" data-col="3"></div>
-                    <div class="field--col" data-row="7" data-col="4"></div>
-                    <div class="field--col" data-row="7" data-col="5"></div>
-                    <div class="field--col" data-row="7" data-col="6"></div>
-                    <div class="field--col" data-row="7" data-col="7"></div>
-                    <div class="field--col" data-row="7" data-col="8"></div>
-                    <div class="field--col" data-row="7" data-col="9"></div>
-                </div>
-                <div class="field--row">
-                    <div class="field--col" data-row="8" data-col="0"></div>
-                    <div class="field--col" data-row="8" data-col="1"></div>
-                    <div class="field--col" data-row="8" data-col="2"></div>
-                    <div class="field--col" data-row="8" data-col="3"></div>
-                    <div class="field--col" data-row="8" data-col="4"></div>
-                    <div class="field--col" data-row="8" data-col="5"></div>
-                    <div class="field--col" data-row="8" data-col="6"></div>
-                    <div class="field--col" data-row="8" data-col="7"></div>
-                    <div class="field--col" data-row="8" data-col="8"></div>
-                    <div class="field--col" data-row="8" data-col="9"></div>
-                </div>
-                <div class="field--row">
-                    <div class="field--col" data-row="9" data-col="0"></div>
-                    <div class="field--col" data-row="9" data-col="1"></div>
-                    <div class="field--col" data-row="9" data-col="2"></div>
-                    <div class="field--col" data-row="9" data-col="3"></div>
-                    <div class="field--col" data-row="9" data-col="4"></div>
-                    <div class="field--col" data-row="9" data-col="5"></div>
-                    <div class="field--col" data-row="9" data-col="6"></div>
-                    <div class="field--col" data-row="9" data-col="7"></div>
-                    <div class="field--col" data-row="9" data-col="8"></div>
-                    <div class="field--col" data-row="9" data-col="9"></div>
-                </div>
-            </div>
-        </div><!--        BATTLEFIELD-->
-
-
-    </main>
 </header>
+<main>
 
-<script
-        src="https://code.jquery.com/jquery-3.5.1.min.js"
-        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-        crossorigin="anonymous"></script>
-<script src="src/js/main.js"></script>
+    <!--        BATTLEFIELD-->
+
+    <div class="battlefield">
+
+        <div id="player-field" class="field">
+            <div class="field__row">
+                <div class="field__col"></div>
+                <div class="field__col">А</div>
+                <div class="field__col">Б</div>
+                <div class="field__col">В</div>
+                <div class="field__col">Г</div>
+                <div class="field__col">Д</div>
+                <div class="field__col">Е</div>
+                <div class="field__col">Ж</div>
+                <div class="field__col">З</div>
+                <div class="field__col">И</div>
+                <div class="field__col">К</div>
+            </div>
+            <div class="field__row">
+                <div class="field__col">1</div>
+                <div class="field__col" data-row="0" data-col="0"></div>
+                <div class="field__col" data-row="0" data-col="1"></div>
+                <div class="field__col" data-row="0" data-col="2"></div>
+                <div class="field__col" data-row="0" data-col="3"></div>
+                <div class="field__col" data-row="0" data-col="4"></div>
+                <div class="field__col" data-row="0" data-col="5"></div>
+                <div class="field__col" data-row="0" data-col="6"></div>
+                <div class="field__col" data-row="0" data-col="7"></div>
+                <div class="field__col" data-row="0" data-col="8"></div>
+                <div class="field__col" data-row="0" data-col="9"></div>
+            </div>
+            <div class="field__row">
+                <div class="field__col">2</div>
+                <div class="field__col" data-row="1" data-col="0"></div>
+                <div class="field__col" data-row="1" data-col="1"></div>
+                <div class="field__col" data-row="1" data-col="2"></div>
+                <div class="field__col" data-row="1" data-col="3"></div>
+                <div class="field__col" data-row="1" data-col="4"></div>
+                <div class="field__col" data-row="1" data-col="5"></div>
+                <div class="field__col" data-row="1" data-col="6"></div>
+                <div class="field__col" data-row="1" data-col="7"></div>
+                <div class="field__col" data-row="1" data-col="8"></div>
+                <div class="field__col" data-row="1" data-col="9"></div>
+            </div>
+            <div class="field__row">
+                <div class="field__col">3</div>
+                <div class="field__col" data-row="2" data-col="0"></div>
+                <div class="field__col" data-row="2" data-col="1"></div>
+                <div class="field__col" data-row="2" data-col="2"></div>
+                <div class="field__col" data-row="2" data-col="3"></div>
+                <div class="field__col" data-row="2" data-col="4"></div>
+                <div class="field__col" data-row="2" data-col="5"></div>
+                <div class="field__col" data-row="2" data-col="6"></div>
+                <div class="field__col" data-row="2" data-col="7"></div>
+                <div class="field__col" data-row="2" data-col="8"></div>
+                <div class="field__col" data-row="2" data-col="9"></div>
+            </div>
+            <div class="field__row">
+                <div class="field__col">4</div>
+                <div class="field__col" data-row="3" data-col="0"></div>
+                <div class="field__col" data-row="3" data-col="1"></div>
+                <div class="field__col" data-row="3" data-col="2"></div>
+                <div class="field__col" data-row="3" data-col="3"></div>
+                <div class="field__col" data-row="3" data-col="4"></div>
+                <div class="field__col" data-row="3" data-col="5"></div>
+                <div class="field__col" data-row="3" data-col="6"></div>
+                <div class="field__col" data-row="3" data-col="7"></div>
+                <div class="field__col" data-row="3" data-col="8"></div>
+                <div class="field__col" data-row="3" data-col="9"></div>
+            </div>
+            <div class="field__row">
+                <div class="field__col">5</div>
+                <div class="field__col" data-row="4" data-col="0"></div>
+                <div class="field__col" data-row="4" data-col="1"></div>
+                <div class="field__col" data-row="4" data-col="2"></div>
+                <div class="field__col" data-row="4" data-col="3"></div>
+                <div class="field__col" data-row="4" data-col="4"></div>
+                <div class="field__col" data-row="4" data-col="5"></div>
+                <div class="field__col" data-row="4" data-col="6"></div>
+                <div class="field__col" data-row="4" data-col="7"></div>
+                <div class="field__col" data-row="4" data-col="8"></div>
+                <div class="field__col" data-row="4" data-col="9"></div>
+            </div>
+            <div class="field__row">
+                <div class="field__col">6</div>
+                <div class="field__col" data-row="5" data-col="0"></div>
+                <div class="field__col" data-row="5" data-col="1"></div>
+                <div class="field__col" data-row="5" data-col="2"></div>
+                <div class="field__col" data-row="5" data-col="3"></div>
+                <div class="field__col" data-row="5" data-col="4"></div>
+                <div class="field__col" data-row="5" data-col="5"></div>
+                <div class="field__col" data-row="5" data-col="6"></div>
+                <div class="field__col" data-row="5" data-col="7"></div>
+                <div class="field__col" data-row="5" data-col="8"></div>
+                <div class="field__col" data-row="5" data-col="9"></div>
+            </div>
+            <div class="field__row">
+                <div class="field__col">7</div>
+                <div class="field__col" data-row="6" data-col="0"></div>
+                <div class="field__col" data-row="6" data-col="1"></div>
+                <div class="field__col" data-row="6" data-col="2"></div>
+                <div class="field__col" data-row="6" data-col="3"></div>
+                <div class="field__col" data-row="6" data-col="4"></div>
+                <div class="field__col" data-row="6" data-col="5"></div>
+                <div class="field__col" data-row="6" data-col="6"></div>
+                <div class="field__col" data-row="6" data-col="7"></div>
+                <div class="field__col" data-row="6" data-col="8"></div>
+                <div class="field__col" data-row="6" data-col="9"></div>
+            </div>
+            <div class="field__row">
+                <div class="field__col">8</div>
+                <div class="field__col" data-row="7" data-col="0"></div>
+                <div class="field__col" data-row="7" data-col="1"></div>
+                <div class="field__col" data-row="7" data-col="2"></div>
+                <div class="field__col" data-row="7" data-col="3"></div>
+                <div class="field__col" data-row="7" data-col="4"></div>
+                <div class="field__col" data-row="7" data-col="5"></div>
+                <div class="field__col" data-row="7" data-col="6"></div>
+                <div class="field__col" data-row="7" data-col="7"></div>
+                <div class="field__col" data-row="7" data-col="8"></div>
+                <div class="field__col" data-row="7" data-col="9"></div>
+            </div>
+            <div class="field__row">
+                <div class="field__col">9</div>
+                <div class="field__col" data-row="8" data-col="0"></div>
+                <div class="field__col" data-row="8" data-col="1"></div>
+                <div class="field__col" data-row="8" data-col="2"></div>
+                <div class="field__col" data-row="8" data-col="3"></div>
+                <div class="field__col" data-row="8" data-col="4"></div>
+                <div class="field__col" data-row="8" data-col="5"></div>
+                <div class="field__col" data-row="8" data-col="6"></div>
+                <div class="field__col" data-row="8" data-col="7"></div>
+                <div class="field__col" data-row="8" data-col="8"></div>
+                <div class="field__col" data-row="8" data-col="9"></div>
+            </div>
+            <div class="field__row">
+                <div class="field__col">10</div>
+                <div class="field__col" data-row="9" data-col="0"></div>
+                <div class="field__col" data-row="9" data-col="1"></div>
+                <div class="field__col" data-row="9" data-col="2"></div>
+                <div class="field__col" data-row="9" data-col="3"></div>
+                <div class="field__col" data-row="9" data-col="4"></div>
+                <div class="field__col" data-row="9" data-col="5"></div>
+                <div class="field__col" data-row="9" data-col="6"></div>
+                <div class="field__col" data-row="9" data-col="7"></div>
+                <div class="field__col" data-row="9" data-col="8"></div>
+                <div class="field__col" data-row="9" data-col="9"></div>
+            </div>
+        </div>
+        <div id="enemy-field" class="field">
+            <div class="field__row">
+                <div class="field__col"></div>
+                <div class="field__col">А</div>
+                <div class="field__col">Б</div>
+                <div class="field__col">В</div>
+                <div class="field__col">Г</div>
+                <div class="field__col">Д</div>
+                <div class="field__col">Е</div>
+                <div class="field__col">Ж</div>
+                <div class="field__col">З</div>
+                <div class="field__col">И</div>
+                <div class="field__col">К</div>
+            </div>
+            <div class="field__row">
+                <div class="field__col ">1</div>
+                <div class="field__col " data-row="0" data-col="0"></div>
+                <div class="field__col " data-row="0" data-col="1"></div>
+                <div class="field__col " data-row="0" data-col="2"></div>
+                <div class="field__col " data-row="0" data-col="3"></div>
+                <div class="field__col " data-row="0" data-col="4"></div>
+                <div class="field__col " data-row="0" data-col="5"></div>
+                <div class="field__col " data-row="0" data-col="6"></div>
+                <div class="field__col " data-row="0" data-col="7"></div>
+                <div class="field__col " data-row="0" data-col="8"></div>
+                <div class="field__col " data-row="0" data-col="9"></div>
+            </div>
+            <div class="field__row">
+                <div class="field__col ">2</div>
+                <div class="field__col " data-row="1" data-col="0"></div>
+                <div class="field__col " data-row="1" data-col="1"></div>
+                <div class="field__col " data-row="1" data-col="2"></div>
+                <div class="field__col " data-row="1" data-col="3"></div>
+                <div class="field__col " data-row="1" data-col="4"></div>
+                <div class="field__col " data-row="1" data-col="5"></div>
+                <div class="field__col " data-row="1" data-col="6"></div>
+                <div class="field__col " data-row="1" data-col="7"></div>
+                <div class="field__col " data-row="1" data-col="8"></div>
+                <div class="field__col " data-row="1" data-col="9"></div>
+            </div>
+            <div class="field__row">
+                <div class="field__col ">3</div>
+                <div class="field__col " data-row="2" data-col="0"></div>
+                <div class="field__col " data-row="2" data-col="1"></div>
+                <div class="field__col " data-row="2" data-col="2"></div>
+                <div class="field__col " data-row="2" data-col="3"></div>
+                <div class="field__col " data-row="2" data-col="4"></div>
+                <div class="field__col " data-row="2" data-col="5"></div>
+                <div class="field__col " data-row="2" data-col="6"></div>
+                <div class="field__col " data-row="2" data-col="7"></div>
+                <div class="field__col " data-row="2" data-col="8"></div>
+                <div class="field__col " data-row="2" data-col="9"></div>
+            </div>
+            <div class="field__row">
+                <div class="field__col ">4</div>
+                <div class="field__col " data-row="3" data-col="0"></div>
+                <div class="field__col " data-row="3" data-col="1"></div>
+                <div class="field__col " data-row="3" data-col="2"></div>
+                <div class="field__col " data-row="3" data-col="3"></div>
+                <div class="field__col " data-row="3" data-col="4"></div>
+                <div class="field__col " data-row="3" data-col="5"></div>
+                <div class="field__col " data-row="3" data-col="6"></div>
+                <div class="field__col " data-row="3" data-col="7"></div>
+                <div class="field__col " data-row="3" data-col="8"></div>
+                <div class="field__col " data-row="3" data-col="9"></div>
+            </div>
+            <div class="field__row">
+                <div class="field__col ">5</div>
+                <div class="field__col " data-row="4" data-col="0"></div>
+                <div class="field__col " data-row="4" data-col="1"></div>
+                <div class="field__col " data-row="4" data-col="2"></div>
+                <div class="field__col " data-row="4" data-col="3"></div>
+                <div class="field__col " data-row="4" data-col="4"></div>
+                <div class="field__col " data-row="4" data-col="5"></div>
+                <div class="field__col " data-row="4" data-col="6"></div>
+                <div class="field__col " data-row="4" data-col="7"></div>
+                <div class="field__col " data-row="4" data-col="8"></div>
+                <div class="field__col " data-row="4" data-col="9"></div>
+            </div>
+            <div class="field__row">
+                <div class="field__col ">6</div>
+                <div class="field__col " data-row="5" data-col="0"></div>
+                <div class="field__col " data-row="5" data-col="1"></div>
+                <div class="field__col " data-row="5" data-col="2"></div>
+                <div class="field__col " data-row="5" data-col="3"></div>
+                <div class="field__col " data-row="5" data-col="4"></div>
+                <div class="field__col " data-row="5" data-col="5"></div>
+                <div class="field__col " data-row="5" data-col="6"></div>
+                <div class="field__col " data-row="5" data-col="7"></div>
+                <div class="field__col " data-row="5" data-col="8"></div>
+                <div class="field__col " data-row="5" data-col="9"></div>
+            </div>
+            <div class="field__row">
+                <div class="field__col ">7</div>
+                <div class="field__col " data-row="6" data-col="0"></div>
+                <div class="field__col " data-row="6" data-col="1"></div>
+                <div class="field__col " data-row="6" data-col="2"></div>
+                <div class="field__col " data-row="6" data-col="3"></div>
+                <div class="field__col " data-row="6" data-col="4"></div>
+                <div class="field__col " data-row="6" data-col="5"></div>
+                <div class="field__col " data-row="6" data-col="6"></div>
+                <div class="field__col " data-row="6" data-col="7"></div>
+                <div class="field__col " data-row="6" data-col="8"></div>
+                <div class="field__col " data-row="6" data-col="9"></div>
+            </div>
+            <div class="field__row">
+                <div class="field__col ">8</div>
+                <div class="field__col " data-row="7" data-col="0"></div>
+                <div class="field__col " data-row="7" data-col="1"></div>
+                <div class="field__col " data-row="7" data-col="2"></div>
+                <div class="field__col " data-row="7" data-col="3"></div>
+                <div class="field__col " data-row="7" data-col="4"></div>
+                <div class="field__col " data-row="7" data-col="5"></div>
+                <div class="field__col " data-row="7" data-col="6"></div>
+                <div class="field__col " data-row="7" data-col="7"></div>
+                <div class="field__col " data-row="7" data-col="8"></div>
+                <div class="field__col " data-row="7" data-col="9"></div>
+            </div>
+            <div class="field__row">
+                <div class="field__col ">9</div>
+                <div class="field__col " data-row="8" data-col="0"></div>
+                <div class="field__col " data-row="8" data-col="1"></div>
+                <div class="field__col " data-row="8" data-col="2"></div>
+                <div class="field__col " data-row="8" data-col="3"></div>
+                <div class="field__col " data-row="8" data-col="4"></div>
+                <div class="field__col " data-row="8" data-col="5"></div>
+                <div class="field__col " data-row="8" data-col="6"></div>
+                <div class="field__col " data-row="8" data-col="7"></div>
+                <div class="field__col " data-row="8" data-col="8"></div>
+                <div class="field__col " data-row="8" data-col="9"></div>
+            </div>
+            <div class="field__row">
+                <div class="field__col ">10</div>
+                <div class="field__col " data-row="9" data-col="0"></div>
+                <div class="field__col " data-row="9" data-col="1"></div>
+                <div class="field__col " data-row="9" data-col="2"></div>
+                <div class="field__col " data-row="9" data-col="3"></div>
+                <div class="field__col " data-row="9" data-col="4"></div>
+                <div class="field__col " data-row="9" data-col="5"></div>
+                <div class="field__col " data-row="9" data-col="6"></div>
+                <div class="field__col " data-row="9" data-col="7"></div>
+                <div class="field__col " data-row="9" data-col="8"></div>
+                <div class="field__col " data-row="9" data-col="9"></div>
+            </div>
+        </div>
+    </div><!--        BATTLEFIELD-->
+
+
+</main>
+<footer>
+    <div class="modal modal--win">
+        <div class="modal__title">Раунд окончен! <span class="winner"></span></div>
+        <div class="modal__stat">
+            Статистика раунда:
+            <div class="stat-header row">
+                <div class="col-4"></div>
+                <div class="col-4">Вы</div>
+                <div class="col-4">Противник</div>
+            </div>
+            <div class="hits row">
+                <div class="col-4">Попаданий:</div>
+                <div class="col-4 player">41</div>
+                <div class="col-4 enemy">34</div>
+            </div>
+            <div class="killings row">
+                <div class="col-4">Потоплено:</div>
+                <div class="col-4 player">10</div>
+                <div class="col-4 enemy">3</div>
+            </div>
+
+        </div>
+        <div class="modal__btn">НОВЫЙ РАУНД</div>
+    </div>
+    <script
+            src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
+    <script async type="module" src="src/js/types.js"></script>
+    <script async type="module" src="src/js/Player.js"></script>
+    <script async type="module" src="src/js/Game.js"></script>
+    <script async type="module" src="src/js/main.js"></script>
+</footer>
 </body>
 </html>
